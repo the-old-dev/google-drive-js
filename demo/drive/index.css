@@ -1,0 +1,41 @@
+.drive-page {
+    display: grid;
+    justify-content: space-around;
+    grid-row-gap: 10px;
+    width: 1325px;
+}
+
+div.navigation {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+search-form {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+select-form {
+    grid-column: 1;
+    grid-row: 3 / span 3;
+}
+
+create-form {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+get-form {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+update-form {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+delete-form {
+    grid-column: 2;
+    grid-row: 5;
+}

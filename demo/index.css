@@ -1,0 +1,47 @@
+body {
+    font-family: Arial;
+}
+
+a.link {
+    border: dotted #4285f4 1px;
+    border-radius: 5px;
+    padding: 5px;
+    color: #4285f4;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 240px;
+}
+
+div.navigation {
+    background-color: #4285f4;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+div.header {
+    width: 640px;
+    border: 1px solid #4285f4;
+}
+
+/* unvisited link */
+a.navigation:link {
+    color: white;
+    text-decoration: none;
+}
+
+/* visited link */
+a.navigation:visited {
+    color: white;
+}
+
+/* mouse over link */
+a.navigation:hover {
+    font-weight: bold;
+}
+
+/* selected link */
+a.navigation:active {
+    font-weight: bold;
+}

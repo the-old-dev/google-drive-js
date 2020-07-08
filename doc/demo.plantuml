@@ -1,0 +1,100 @@
+@startuml
+
+
+(*) -down-> "
+{{
+salt
+{# 
+  <size:32><&key></size> | **Google**
+ ... | [ Login ]
+}
+}} 
+" as login
+
+login -down-> "
+{{
+salt
+{# 
+  <size:32><&hard-drive></size> | **Search**
+  ... | {#
+      {
+       Folder: | [X] Yes/No
+       Name: | "  <name>"
+       Found: | <found-metadata>
+      } | [ Search ]
+  }
+}
+}} 
+" as search
+
+search -down-> "
+{{
+salt
+{# 
+  <size:32><&hard-drive></size> | **Create**
+  ... | {#
+  {
+   Folder: | [X] Yes/No
+   Parent-ID | "<file-id>"
+   Name | "<name<"
+   Content | "<file-content>"
+   Response: | <response>
+   } | [ Create/Update]
+  }
+}
+}} 
+" as create
+
+create -right-> "
+{{
+salt
+{# 
+  <size:32><&hard-drive></size> | **List**
+  ... | {#
+  {
+   Folder-ID: | "<folder-id>"
+   Files: | <files>
+  } | [ List Files    ]
+  }
+}
+}} 
+" as list
+
+list -up-> "
+{{
+salt
+{# 
+  <size:32><&hard-drive></size> | **Read**
+  ... | {#
+  
+  {
+    File-ID: | " <file-id>"
+    Content: | <file-content>
+  } | [ Read File     ]
+  
+  }
+}
+}} 
+" as read
+
+read -up-> "
+{{
+salt
+{# 
+  <size:32><&hard-drive></size> | **Delete**
+  ... | {#
+  
+  { 
+   Folder-ID: | " file-id" 
+   Response: | <response>
+  } |  [ Delete File   ]
+  
+  
+  }
+}
+}} 
+" as delete
+
+delete -up-> (*)
+
+@enduml
